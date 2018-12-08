@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function onehundred_minus_sum(x)
+      {
+        var s = 100;
+        for (var i = 0;i < x.length;++i) {
+          s -= x[i];
+        }
+        return s;
+      }
+    </script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var a = new Array(1,2,3,4,5);
+      var b = new Array(10,20,30);
+      document.write("a[] = " + onehundred_minus_sum(a) + "<br/>");
+      document.write("b[] = " + onehundred_minus_sum(b) + "<br/>");
+    </script>
+  </body>
+</html>

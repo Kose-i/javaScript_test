@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <script type="text/javascript">
+      var girls = new Array(3);
+      girls[0] = new Array("結衣", "yui.gif", 21);
+      girls[1] = new Array("彩香", "ayaka.gif", 19);
+      girls[2] = new Array("理沙", "lisa.gif", 20);
+
+      for (var i = 0;i < 3;++i) {
+        if (girls[i][2] >= 20) {
+          document.write("<img src='img/" + girls[i][1] + "'>");
+          document.write(girls[i][0] + "☆ " + girls[i][2] + "<br/><br/>");
+        }
+      }
+    </script>
+  </body>
+</html>
