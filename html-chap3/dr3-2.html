@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function over1()
+      {
+        var obj = document.getElementById("boy");
+        obj.src = "img/boy1.gif";
+      }
+      function out1()
+      {
+        var obj = document.getElementById("boy");
+        obj.src = "img/boy2.gif";
+      }
+      function over2()
+      {
+        var obj = document.getElementById("girl");
+        obj.src = "img/girl1.gif";
+      }
+      function out2()
+      {
+        var obj = document.getElementById("girl");
+        obj.src = "img/girl2.gif";
+      }
+    </script>
+  </head>
+  <body>
+    <img id="boy" src="img/boy1.gif" onMouseOver="over1()" onMouseOut="out1()"/>
+    <img id="girl" src="img/girl1.gif" onMouseOver="over2()" onMouseOut="out2()"/>
+  </body>
+</html>

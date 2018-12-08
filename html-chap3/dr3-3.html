@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      var flag = "false";
+      function change()
+      {
+        setTimeout("change()", 250);
+        var obj = document.getElementById("boy");
+        if (flag) {
+          obj.src = "img/boy2.gif";
+        } else {
+          obj.src = "img/boy1.gif";
+        }
+        flag =! flag;
+      }
+    </script>
+  </head>
+  <body onLoad = "change()">
+    <img id="boy" src="img/boy1.gif"/>
+  </body>
+</html>

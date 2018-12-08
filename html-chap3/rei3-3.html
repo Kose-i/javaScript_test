@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      var flag = "false";
+      function disp()
+      {
+        setTimeout("disp()", 500);
+        var obj = document.getElementById("boy");
+        if (flag) {
+          obj.src = "img/boy2.gif";
+        } else {
+          obj.src = "img/boy1.gif";
+        }
+        flag =! flag;
+      }
+    </script>
+  </head>
+  <body onLoad = "disp()">
+    <img id="boy" src="img/boy1.gif"/>
+  </body>
+</html>

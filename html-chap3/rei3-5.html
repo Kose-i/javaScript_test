@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function disp()
+      {
+        var msg = document.getElementById("msg");
+        var name = document.getElementById("name");
+        msg.innerHTML = "ようこそ" + name.value + "さん";
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <input id="name" type="text" size="14">
+      <input type="button" value="表示" onClick="disp()">
+    </form>
+    <div id="msg">
+      ここの内容が変わります
+    <div>
+  </body>
+</html>
