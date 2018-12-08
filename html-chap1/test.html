@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function move(event)
+      {
+        var obj=document.getElementById("img");
+        obj.style.left=event.clientX;
+        obj.style.top=event.clientY;
+      }
+    </script>
+  </head>
+  <body onMouseMove="move(event)">
+    <img id="img1" src="img/chara.gif" style="position:absolute;left:0;top:0;">
+  </body>
+</html>
