@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function draw()
+      {
+        var obj, a, b, n = 0;
+        a=document.getElementById("fact1").value;
+        b=document.getElementById("fact2").value;
+
+        for (var angle = 0;x <= 360;angle += 0.5) {
+          var x = 150*Math.sin(a*angle*Math.PI/180);
+          var y = 150*Math.sin(b*angle*Math.PI/180);
+          obj=document.getElementById("dot"+n);
+          obj.style.left=(250+20)+x;
+          obj.style.top=(250+50)-y;
+          ++n;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      a<input id="fact1" type="text" size="4">
+      b<input id="fact2" type="text" size="4">
+      <input type="button" value="グラフ" onClick="draw()">
+    </form>
+
+    <img src="img/axis.png" style="position:absolute;left=20;top:50"/>
+    <script type="text/javascript">
+      for (var i = 0;i < 1000;++i) {
+        documnt.write("<img id='dot" +i+ "' src='img/dot.png' style='position:absolute;top=0;left:0'>");
+      }
+    </script>
+  <body>
+</html>

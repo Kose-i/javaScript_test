@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script type="text/javascript">
+    var x = 40, dx = 10;
+    var y = 40; dy = 10;
+    function move()
+    {
+      setTimeout("move()", 100);
+      var obj = document.getElementById("face");
+      x += dx;
+      y += dy;
+      obj.style.left = x;
+      obj.style.top = y;
+      if (x <= 0 || document.body.clientWidth <= x + 74) dx = - dx;
+      if (y <= 0 || document.body.clientHeight <= y + 74) dy = -dy;
+    }
+    </script>
+  </head>
+  <body onLoad="move()">
+    <img id="face" src="img/face.gif" style="position:absolute;left:40;top:40">
+  </body>
+</html>

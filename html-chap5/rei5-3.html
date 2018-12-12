@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function move(event)
+      {
+        setTimeout("go(" + event.clientX + "," + event.clientY + ")", 100);
+      }
+      function go(x, y)
+      {
+        var obj = document.getElementById("chara");
+        obj.style.left = x;
+        obj.style.top = y;
+      }
+    </script>
+  </head>
+  <body onMouseMove="move(event)">
+    <img id="chara" src="img/chara.gif" style="position:absolute;left:100;top:100"/>
+  </body>
+</html>

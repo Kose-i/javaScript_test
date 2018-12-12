@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <script type="text/javascript">
+    var x = 40, dx = 10;
+    function move()
+    {
+      setTimeout("move()", 100);
+      var obj = document.getElementById("face");
+      x += dx;
+      obj.style.left = x;
+      if (x <= 0 || document.body.clientWidth <= x + 74) dx = - dx;
+    }
+    </script>
+  </head>
+  <body onLoad="move()">
+    <img id="face" src="img/face.gif" style="position:absolute;left:40;top:40">
+  </body>
+</html>

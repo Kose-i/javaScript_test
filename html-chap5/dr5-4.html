@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function clip(event)
+      {
+        var obj = document.getElementById("photo");
+        var x = obj.clientX + 100;
+        var y = obj.clientY + 100;
+        obj.style.clip = "rect(0, " + x + "," + y + ",0)";
+      }
+    </script>
+  </head>
+  <body onMouseMove="clip(event)">
+    <img id="photo" src="img/sakura.jpg" style="position:absolute;left:50;top:50"/>
+  </body>
+</html>
