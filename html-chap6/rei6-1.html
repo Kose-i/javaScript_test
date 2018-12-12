@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      var x = 200, y = 200; //ボールの初期位置
+      var dx = 10, dy = 10; //ボールの移動速度
+      function move()
+      {
+        setTimeout("move()", 100);
+        var ball=document.getElementById("ball");
+        x+=dx;
+        y+=dy;
+        ball.style.left=x;
+        ball.style.top=y;
+        if (x <= 0 || document.body.clientWidth <= x+10) {
+          dx = -dx;
+        }
+        if (y <= 0 || document.body.clientHeight <= y+10) {
+          dy = -dy;
+        }
+      }
+    </script>
+  </head>
+  <body onLoad="move()">
+    <img id="ball" src="img/ball.png" style="position:absolute;left:200;top:200"/>
+  </body>
+</html>
