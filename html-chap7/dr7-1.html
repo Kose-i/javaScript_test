@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function draw(obj)
+      {
+        obj.src = "img/black.png";
+      }
+    </script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var n = 0;
+      for (var x = 10;x <= 80;x += 10) {
+        for (var y = 10;y <= 80;y += 10) {
+          document.write("<img id='square"+n+"' src='img/block.png' style='position:absolute;left:"+x+";top:"+y+"' onClick='draw(this)'/>")
+          n++;
+        }
+      }
+    </script>
+  </body>
+</html>

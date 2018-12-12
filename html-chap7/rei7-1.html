@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function draw(event)
+      {
+        var x = Math.floor((event.clientX - 10)/10);
+        var y = Math.floor((event.clientY - 10)/10);
+
+        if (0 <= x && x < 16 && 0 <= y && y < 16) {
+          var n = y*16+x;
+          var obj = document.getElementById("square"+n);
+          obj.src="img/black.png";
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      var n = 0;
+      for (var y = 10;y <= 160;y += 10) {
+        for (var x = 10;x <= 160;y += 10) {
+          document.write("<img id='square" +n+ "' src='img/block.png' style='position:absolute;left:"+x+";top:"+y+"' onClick='draw(event)'>");
+          ++n;
+        }
+      }
+    </script>
+  </body>
+</html>

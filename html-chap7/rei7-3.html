@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      var m, NX, NY;
+      function draw(event)
+      {
+        var x = Math.floor((event.clientX - 10)/ 10);
+        var y = Math.floor((event.clientY - 10)/ 10);
+        if (0 <= x && x < NX && 0 <= y && y < NY) {
+          var n = y*NX +x;
+          var obj = document.getElementById("square" + n);
+          if (m[y][x] == 0) {
+            obj.src="img/black.png";
+            m[y][x] = 1;
+          } else {
+            obj.src="img/block.png";
+            m[y][x] = 0;
+          }
+        }
+      }
+
+      function init(ny, nx)
+      {
+        var n = 0;
+        NY = ny; NX = nx;
+        for (var y = 10;y <= 10*NY;y += 10) {
+          for (var x = 10;x <= 10*NX;x +=10) {
+            document.write("<img id='square"+n+"' src='img/block.png' style='position:absolute;left:"+x+";top:"+y+"' onClick='draw(event)'>");
+            ++n;
+          }
+        }
+
+        m = new Array(NY);
+        for (var y = 0;y < NY;++y) {
+          m[y] = new Array(NX);
+          for (var x = 0;x < NX;++x) {
+            m[y][x] = 0;
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      init(10,20);
+    </script>
+  </body>
+</html>
