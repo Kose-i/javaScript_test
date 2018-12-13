@@ -1,0 +1,19 @@
+<html>
+  <body>
+    <script type="text/javascript">
+      var a = new Array(56, 60, 76, 80, 75, 81, 45, 67,
+                        73, 91, 56, 78, 81, 56, 90, 86);
+      var hist = new Array(11);
+      for (var i = 0;i < 11;++i) {
+        hist[i] = 0;
+      }
+      for (var i = 0;i < a.length;++i) {
+        var r = parseInt(a[i]/10);
+        ++hist[r];
+      }
+      for (var i = 0;i < 11;++i) {
+        document.write(i*10+"-:"+hist[i]+"<br>");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      var m = new Array(8);
+      m[0] = new Array(0,2,2,0,0,2,2,0);
+      m[1] = new Array(2,0,2,0,0,2,0,2);
+      m[2] = new Array(2,0,0,2,2,0,0,2);
+      m[3] = new Array(2,0,0,0,0,0,0,2);
+      m[4] = new Array(2,2,0,0,0,0,2,2);
+      m[5] = new Array(0,2,0,0,0,0,2,0);
+      m[6] = new Array(0,0,2,0,0,2,0,0);
+      m[7] = new Array(0,0,0,2,2,0,0,0);
+      function visit(y, x)
+      {
+        m[y][x] = 1;
+        if (m[y][x + 1] == 0) {
+          visit(y, x+1);
+        }
+        if (m[y + 1][x] == 0) {
+          visit(y+1, x);
+        }
+        if (m[y][x - 1] == 0) {
+          visit(y, x-1);
+        }
+        if (m[y - 1][x] == 0) {
+          visit(y-1, x);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      visit(4,4);
+      for (var y = 0;y < m.length;++y) {
+        for (var x = 0;x < m[0].length;++x) {
+          if (m[y][x] == 2) {
+            document.write("<img src='img/black.png'>");
+          } else if (m[y][x] == 1) {
+            document.write("<img src='img/blue.png'>");
+          } else {
+            document.write("<img src='img/block.png'>");
+          }
+        }
+        document.write("<br/>");
+      }
+    </script>
+  </body>
+</html>

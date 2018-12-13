@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      var result;
+      function hanoi(n,a,b,c)
+      {
+        if (n > 0) {
+          hanoi(n - 1, a, c, b);
+          result.value+= n+ "番目の板を" +a+ "->" +b+ "\n";
+          hanoi(n-1, c, b, a);
+        }
+      }
+      function init()
+      {
+        var n = document.getElementById("number").value;
+        result=document.getElementById("result");
+        result.value="";
+        hanoi(n, "a", "b", "c");
+      }
+    </script>
+  </head>
+  <form>
+    <input id="number" type="text" size="4"/>
+    <input type="button" value="ハノイ" onClick="init()"/><br>
+    <textarea id="result" rows="20" cols="20"></textarea>
+  </form>
+</html>

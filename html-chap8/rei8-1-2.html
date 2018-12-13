@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <script type="text/javascript">
+      var a = new Array(17,35,10,50,20);
+      var junni = new Array(a.length);
+      for (var i = 0;i < a.length;++i) {
+        junni[i] = 1;
+        for (var j = 0;j < a.length;++j) {
+          if (a[i] < a[j]) {
+            ++junni[i];
+          }
+        }
+        document.write(a[i]+":"+junni[i]+"位<br/>");
+      }
+    </script>
+  </body>
+</html>
