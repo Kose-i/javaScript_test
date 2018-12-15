@@ -1,0 +1,59 @@
+.block1{
+  background:linear-gradient(red, white);
+  height:300px;
+  width:400px;
+}
+.block2{
+  background:linear-gradient(to bottom, blue, black);
+  height:300px;
+  width:400px;
+}
+.block3{
+  background:linear-gradient(45deg, pink, red);
+  height:300px;
+  width:400px;
+}
+.block4{
+  background:linear-gradient(30deg, white, black, red, blue);
+  height:300px;
+  width:400px;
+}
+.circle1{
+  background:radial-gradient(100px 100px at 50px 100px, red, white);
+  height:300px;
+  width:400px;
+}
+.circle2{
+  background:radial-gradient(white, black, red, blue);
+  height:300px;
+  width:400px;
+}
+.circle3{
+  background:radial-gradient(ellipse farthest-corner, red, white);
+  height:300px;
+  width:400px;
+}
+.circle4{
+  background:radial-gradient(circle closest-side at 50px 100px, red, white);
+  height:300px;
+  width:400px;
+}
+.border1{
+  background:repeating-radial-gradient(30px 30px at 40px 100px, red, white);
+  height:300px;
+  width:400px;
+  border:1px solid black;
+}
+.border2{
+  background:repeating-linear-gradient(red, red 30px, transparent 30px, transparent 60px);
+  height:300px;
+  width:400px;
+  border:1px solid black;
+}
+.border3{
+  background:repeating-linear-gradient(to bottom, red, red 30px, transparent 30px, transparent 60px), 
+  repeating-linear-gradient(to right, blue, blue 30px, transparent 30px, transparent 60px);
+  height:300px;
+  width:400px;
+  border:1px solid black;
+}
