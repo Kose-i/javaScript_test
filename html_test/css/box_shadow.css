@@ -4,3 +4,9 @@
   height:300px;
   border:double 2px red;
 }
+.box2{
+  box-shadow:inset 4px 4px 4px 6px black;
+  width:400px;
+  height:300px;
+  border:double 2px red;
+}
