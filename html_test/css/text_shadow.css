@@ -1,0 +1,15 @@
+.shadow1{
+  text-shadow:3px 3px 3px green, 5px 5px 5px black;
+  color:red;
+  width:400px;
+  height:100px;
+  font-size:30px;
+}
+.shadow2{
+  text-shadow:1px 1px 6px black;
+  font-weight:bold;
+  color:white;
+  width:400px;
+  height:100px;
+  font-size:30px;
+}
