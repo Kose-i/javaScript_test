@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function isLeap(year)
+      {
+        if (year % 4 == 0 && (year% 400 = 0 || year %100 != 0)) {
+          return true;
+        }
+        return false;
+      }
+      function calcFirstDay(date)
+      {
+        var tmpDate = new Date();
+        tmpDate.setTime(date.getTime());
+        tmpDate.setDate(1);
+        return tmpDate.getDay();
+      }
+      function calcMonthDays()
+    </script>
+  </head>
+</html>
