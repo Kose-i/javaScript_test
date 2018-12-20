@@ -1,9 +1,9 @@
 <html>
   <head>
     <script type="text/javascript">
-      function isLeap(year)
+      function isLeapYear(year)
       {
-        if (year % 4 == 0 && (year% 400 = 0 || year %100 != 0)) {
+        if (year % 4 == 0 && (year% 400 == 0 || year %100 != 0)) {
           return true;
         }
         return false;
@@ -23,13 +23,12 @@
         }
         return monthDays[date.getMonth()];
       }
-
       function display(today, month, firstDay, Days)
       {
-        variStr;
-        document.write("<h3>*", today.getFullYear(), "年");
-        document.write(month+1, "月のカレンダー</h3>");
-        document.write("<table style=\"text-align:right;font-size:24pt\">");
+        var iStr;
+        document.write("<h3>" +today.getFullYear()+ "年");
+        document.write((month+1) + "月のカレンダー</h3>");
+        document.write("<table style='text-align:right;font-size:24pt'>");
         document.write("<tr>");
         document.write("<th>日<th>月<th>火<th>水<th>木<th>金<th>土");
         document.write("</tr>");
