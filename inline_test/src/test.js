@@ -1,6 +1,7 @@
-function onclickbutton()
+function button_click()
 {
-  document.write("test");
-  var t = Element.getById("test");
+  window.document.write("test");
+  var t = document.getElementById("test");
   t.value="ja";
+  alert("test");
 }
