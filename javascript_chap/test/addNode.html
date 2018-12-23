@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function addRow()
+      {
+        var tbody=document.getElementById("firstTr").parentNode;
+        var tr = document.createElement("tr");
+        var td1=document.createElement("td");
+        var txt1 = document.createTextNode("txt1");
+        td1.appendChild(txt1);
+
+        var td2=document.createElement("td");
+        var txt2 = document.createTextNode("txt2");
+        td2.appendChild(txt2);
+
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tbody.appendChild(tr);
+        alert("function addRow");
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="Add" onClick="addRow()">
+
+    <table>
+      <tr id="firstTr">
+        <td>firstTr-1</td>
+        <td>firstTr-2</td>
+      </tr>
+    </table>
+  </body>
+</html>
