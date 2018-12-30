@@ -6,6 +6,14 @@
         var text = document.getElementById("select_name");
         alert(text.value);
       }
+      function say_2()
+      {
+        var text = document.form1.select;
+
+        var num = text.selectedIndex;
+
+        alert(text.options[num].value);
+      }
     </script>
   </head>
   <body>
@@ -20,6 +28,16 @@
         <option value="mini2">mini2</option>
       </optgroup>
     </select>
-    <input type="button" value="button" onClick="say()">
+
+    <form name="form1">
+      <select id="select">
+        <option>select_test1</option>
+        <option>select_test2</option>
+        <option>select_test3</option>
+      </select>
+    </form>
+
+    <input type="button" value="button1" onClick="say()">
+    <input type="button" value="button2" onClick="say_2()">
   </body>
 </html>
