@@ -1,0 +1,17 @@
+<html>
+  <head></head>
+  <body>
+  <script type="text/javascript">
+    overloop:
+    for (i = 1;i <= 5;i++) {
+      innerloop:
+      for (j = 1;j <= 3;j++) {
+        document.write("<p>fjdksl</p>");
+        document.write(i * j);
+        if (j == 2) break innerloop;
+        if (i == 3) break overloop;
+      }
+    }
+  </script>
+  </body>
+</html>
